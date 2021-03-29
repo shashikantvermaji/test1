@@ -6,13 +6,36 @@
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>app1</name>
+
+  <repositories>
+    <repository>
+      <id>JBOSS_NEXUS</id>
+      <url>http://repository.jboss.org/nexus/content/groups/public</url>
+    </repository>
+    <repository>
+      <id>dragome</id>
+      <name>dragome</name>
+      <url>https://raw.github.com/dragome/dragome/master/maven</url>
+    </repository>
+  </repositories>
+
   <dependencies>
-      <dependency>
-      <groupId>org.apache.maven.plugin-tools</groupId>
-      <artifactId>maven-plugin-annotations</artifactId>
-      <version>3.6.0</version>
+ <dependency>
+      <groupId>com.dragome</groupId>
+      <artifactId>dragome-sdk</artifactId>
+      <version>0.96-beta2</version>
+      <type>pom</type>
     </dependency>
-    </dependencies>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-web-api</artifactId>
+      <version>6.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+
   <build>
     <finalName>java</finalName>
     <outputDirectory>${basedir}/src/main/webapp/WEB-INF/classes</outputDirectory>
@@ -45,7 +68,18 @@
           </connectors>
         </configuration>
 
-        
+        <dependencies>
+          <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>5.0.2</version>
+          </dependency>
+          <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-commons</artifactId>
+            <version>5.0.2</version>
+          </dependency>
+        </dependencies>
 
       </plugin>
 
