@@ -6,6 +6,13 @@
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>app1</name>
+  <dependencies>
+      <dependency>
+      <groupId>org.apache.maven.plugin-tools</groupId>
+      <artifactId>maven-plugin-annotations</artifactId>
+      <version>3.6.0</version>
+    </dependency>
+    </dependencies>
   <build>
     <finalName>java</finalName>
     <outputDirectory>${basedir}/src/main/webapp/WEB-INF/classes</outputDirectory>
