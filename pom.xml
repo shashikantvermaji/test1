@@ -23,6 +23,13 @@
   </repositories>
 
   <dependencies>
+	      <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>5.11</version>
+      <scope>test</scope>
+      <classifier>jdk15</classifier>
+    </dependency>
  <dependency>
       <groupId>com.dragome</groupId>
       <artifactId>dragome-sdk</artifactId>
@@ -65,7 +72,16 @@
                 <version>2.9</version>
             </plugin>
 
-      
+            <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
 
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
