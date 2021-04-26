@@ -6,7 +6,6 @@
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   
-  <reporting>
 	
 
   <name>app1</name>
@@ -41,6 +40,8 @@
 
 
   <build>
+	  
+  <reporting>
     <finalName>java</finalName>
     <outputDirectory>${basedir}/src/main/webapp/WEB-INF/classes</outputDirectory>
     <plugins>
